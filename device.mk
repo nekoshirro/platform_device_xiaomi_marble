@@ -304,6 +304,7 @@ PRODUCT_PACKAGES += \
     NfcResMarble \
     SettingsProviderResMarble \
     SettingsProviderResMarbleCN \
+    SettingsResMarble \
     SystemUIResMarble \
     WifiResMarble \
     WifiResMarbleCN
