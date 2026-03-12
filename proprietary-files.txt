@@ -1293,10 +1293,12 @@ vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so|364d43
 vendor/lib/egl/libVkLayer_ADRENO_qprofiler.so|08563691d73cae060147cf488cc626bd20d30ef5
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so|1dbbdf989236564dd6e7b9542ab2ffbd744b6e4c
 vendor/lib/egl/libq3dtools_esx.so|711bf0980af7f5596f87014a5ca71a1f360e59c2
+vendor/lib/libC2D2.so|3ebeddc0528910538e09463c7381c9e544e1b664
 vendor/lib/libCB.so|681ca0cf1b5809a837001e2be4488b1ddc6c784b
 vendor/lib/libOpenCL.so|801f25596929a2f1ba990759412fc937d7115ed1
 vendor/lib/libadreno_app_profiles.so|fa6dad907b23be9fc31e97be9fff988731bd08ba
 vendor/lib/libadreno_utils.so|8457d875a8658b1af632dac1c1a63586635095db
+vendor/lib/libc2d30_bltlib.so|fe5e974e7abb310e8608d6a545647d4afa0219aa
 vendor/lib/libgpudataproducer.so|94667c10e51109843bc6da2bc7845fcf3e24c56b
 vendor/lib/libgsl.so|081ec67072c88b00e8356b005ef9aa5fd3db6880
 vendor/lib/libkcl.so|c9025ad7fff856393f9e28367ce6a1e51b61eee0
@@ -1311,10 +1313,12 @@ vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|5d
 vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|d69e1f5b8d83ba1cab388e334f3bc23a1d17cb34
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|7b1bca9132cb906613aac175b2fa9cc3eda3a55f
 vendor/lib64/egl/libq3dtools_esx.so|a1828e7832df78e85a2169a29b7463137f25d19a
+vendor/lib64/libC2D2.so|7215f1211b5a8c650480b3d4e52e9712740c201d
 vendor/lib64/libCB.so|d2b35f5ed331f58bcd7c308dcc1068163e794044
 vendor/lib64/libOpenCL.so|454b8aaada3a5c449ae90e2232eb761e743fda06
 vendor/lib64/libadreno_app_profiles.so|a538ddbc811072f7090dc2cbd8246afd64a79e92
 vendor/lib64/libadreno_utils.so|fcf178d697aedb91dbf067a7b4f5c82482a8cae3
+vendor/lib64/libc2d30_bltlib.so|e9708df91c010b979397f8d03a12688cc9fb2b55
 vendor/lib64/libgpudataproducer.so|bb781de839f333135593a2922855cb6a66554fd3
 vendor/lib64/libgsl.so|bad86144a8ab801af26a91c81770f88e4ad8f32a
 vendor/lib64/libkcl.so|a82211064a4f963a023b3d74694cf2026a314943
