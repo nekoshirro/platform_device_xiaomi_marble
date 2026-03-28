@@ -64,7 +64,3 @@
 /sys/class/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
 /sys/devices/virtual/thermal/thermal_message/flash_state u:object_r:sys_thermal_flash_state:s0
 /sys/devices/virtual/thermal/thermal_message/wifi_limit u:object_r:sys_thermal_wifi_limit:s0
-
-# Touchscreen
-/dev/xiaomi-touch u:object_r:touchfeature_device:s0
-/vendor/bin/hw/vendor\.lineage\.touch-service\.xiaomi u:object_r:hal_lineage_touch_default_exec:s0
