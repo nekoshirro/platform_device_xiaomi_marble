@@ -7,10 +7,10 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common Infinity-X configuration
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_marble
+PRODUCT_NAME := infinity_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
@@ -23,3 +23,15 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=marble_global
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Infinity-X
+TARGET_BOOT_ANIMATION_RES := 1080
+INFINITY_MAINTAINER := "Alchemist"
+USE_MOTO_CALCULATOR := false
+TARGET_HAS_UDFPS := false
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_SHIPS_FULL_GAPPS := true
+TARGET_SHIPS_GOOGLE_DIALER := true
+TARGET_FACE_UNLOCK_SUPPORTED  := true
+TARGET_SUPPORTS_64_BIT_APPS := true

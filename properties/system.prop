@@ -18,3 +18,10 @@ persist.debug.wfd.enable=1
 
 # Xiaomi
 ro.product.mod_device=marble_global
+
+# Infinity-X
+ro.product.marketname=Redmi Note 12 Turbo
+ro.infinity.soc=Snapdragon® 7+ Gen 2
+ro.infinity.battery=5000 mAh
+ro.infinity.display=6.67″, 120Hz, 2400x1080
+ro.infinity.camera=64MP + 8MP + 2MP
