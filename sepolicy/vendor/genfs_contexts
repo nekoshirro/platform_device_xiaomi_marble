@@ -19,4 +19,4 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix/wakeup u:object_r:sy
 genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup u:object_r:sysfs_wakeup:s0
 
 # Touchscreen
-genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate u:object_r:vendor_sysfs_touch:s0
+# genfscon sysfs /devices/virtual/touch/touch_dev/bump_sample_rate u:object_r:vendor_sysfs_touch:s0
