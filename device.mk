@@ -30,6 +30,9 @@ $(call inherit-product, vendor/xiaomi/marble/marble-vendor.mk)
 # MiuiCamera
 $(call inherit-product-if-exists, device/xiaomi/miuicamera-marble/device.mk)
 
+# GameBar Performance Overlay
+$(call inherit-product, packages/apps/GameBar/gamebar.mk)
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
