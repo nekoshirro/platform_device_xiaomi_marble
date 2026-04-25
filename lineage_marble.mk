@@ -23,3 +23,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=marble_global
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# Derpfest Feature
+DERPFEST_BUILD_TYPE := Community
+TARGET_SUPPORTS_BLUR := true
+TARGET_INCLUDE_ACCORD := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
