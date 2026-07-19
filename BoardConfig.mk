@@ -12,6 +12,8 @@ include vendor/xiaomi/marble/BoardConfigVendor.mk
 
 DEVICE_PATH := device/xiaomi/marble
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # A/B
 AB_OTA_PARTITIONS += \
     boot \
