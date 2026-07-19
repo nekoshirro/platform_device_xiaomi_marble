@@ -6,6 +6,8 @@
 
 soong_namespace {
     imports: [
+        "hardware/google/pixel/pixelstats",
+        "hardware/google/pixel/power-libperfmgr",
         "hardware/xiaomi",
         "vendor/qcom/opensource/commonsys-intf/display",
     ],
