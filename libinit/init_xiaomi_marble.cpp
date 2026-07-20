@@ -10,18 +10,18 @@
 
 #include "vendor_init.h"
 
-#define FINGERPRINT_GL "POCO/marble_global/marble:15/AQ3A.250226.002/OS3.0.3.0.VMRMIXM:user/release-keys"
+#define FINGERPRINT_GL "Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:user/release-keys"
 #define FINGERPRINT_CN "Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:user/release-keys"
-#define FINGERPRINT_IN "POCO/marblein/marblein:15/AQ3A.241006.001/OS2.0.207.0.VMRINXM:user/release-keys"
+#define FINGERPRINT_IN "Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:user/release-keys"
 
 static const variant_info_t marble_global_info = {
     .hwc_value = "GL",
     .sku_value = "",
 
-    .brand = "POCO",
+    .brand = "Redmi",
     .device = "marble",
-    .marketname = "POCO F5",
-    .model = "23049PCD8G",
+    .marketname = "Redmi Note 12 Turbo",
+    .model = "23049RAD8C",
     .mod_device = "marble_global",
     .build_fingerprint = FINGERPRINT_GL,
 };
@@ -30,10 +30,10 @@ static const variant_info_t marblein_info = {
     .hwc_value = "IN",
     .sku_value = "",
 
-    .brand = "POCO",
+    .brand = "Redmi",
     .device = "marblein",
-    .marketname = "POCO F5",
-    .model = "23049PCD8I",
+    .marketname = "Redmi Note 12 Turbo",
+    .model = "23049RAD8C",
 //  .mod_device = "marble_in_global",
     .mod_device = "marble_global", // Fixed miuicamera crash
     .build_fingerprint = FINGERPRINT_IN,
