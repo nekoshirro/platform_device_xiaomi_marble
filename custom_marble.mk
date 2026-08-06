@@ -20,3 +20,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 BUILD_FINGERPRINT := Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+CUSTOM_MAINTAINER := Hafidz_Muzakky
