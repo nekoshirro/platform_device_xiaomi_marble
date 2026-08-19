@@ -7,5 +7,5 @@ if [ -z "${GH_TOKEN:-}" ]; then
 else
     echo "GH_TOKEN: LOADED"
     git clone "https://x-access-token:${GH_TOKEN}@github.com/nekoshirro/platform_hardware_dolby.git" \
-        -b lunaris-m3e hardware/dolby
+        -b lunaris-m3e-pixelos hardware/dolby
 fi
