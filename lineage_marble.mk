@@ -19,6 +19,13 @@ BUILD_FINGERPRINT := Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:us
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# Rendering Optimizations
+SURFACE_FLINGER_BOOST := true
+
+# SurfaceFlinger Refresh Rates
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,120)
+
 # Evolution-X configuration
 EVO_BUILD_TYPE := Unofficial
 TARGET_BOOT_ANIMATION_RES := 1080
