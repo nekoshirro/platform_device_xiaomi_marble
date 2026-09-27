@@ -160,7 +160,7 @@ TARGET_SCREEN_DENSITY := 440
 
 # Security patch level
 BOOT_SECURITY_PATCH := 2026-07-05
-VENDOR_SECURITY_PATCH := 2026-02-01
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
