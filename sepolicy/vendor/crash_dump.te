@@ -1,0 +1,2 @@
+# Allow crash_dump to signal a crashed keystore process so its crash can be handled/dumped normally.
+allow crash_dump keystore:process sigchld;
