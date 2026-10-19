@@ -193,6 +193,12 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
+# The keystore allows in sepolicy/vendor/keystore.te (used by TrickyStore and
+# similar tooling) open shell_data_file, which conflicts with a platform
+# neverallow. Skip neverallow enforcement in secilc/sepolicy-analyze so the
+# precompiled policy still builds.
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
