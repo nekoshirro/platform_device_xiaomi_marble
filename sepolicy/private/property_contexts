@@ -1,3 +1,13 @@
+# Camera
+ro.camera.req.fmq.                  u:object_r:exported_default_prop:s0
+ro.camera.res.fmq.                  u:object_r:exported_default_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages u:object_r:settingslib_prop:s0
+
+# XiaomiParts
+sys.perf_mode_active                         u:object_r:exported_system_prop:s0
+
 # Xiaomi properties read by vendor blobs (qcrild)
 persist.hydra.mem_trace         u:object_r:build_prop:s0 exact string
 ro.carrier.name                 u:object_r:build_prop:s0 exact string
