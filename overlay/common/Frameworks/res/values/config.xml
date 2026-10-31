@@ -191,12 +191,4 @@
 
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
-
-    <!-- Font families for headline/titles -->
-    <string name="config_headlineFontFamily" translatable="false">google-sans</string>
-    <string name="config_headlineFontFamilyMedium" translatable="false">google-sans-medium</string>
-
-    <!-- Font families for body text -->
-    <string name="config_bodyFontFamily" translatable="false">google-sans-flex</string>
-    <string name="config_bodyFontFamilyMedium" translatable="false">google-sans-flex</string>
 </resources>
