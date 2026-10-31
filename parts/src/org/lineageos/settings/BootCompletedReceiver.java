@@ -32,6 +32,7 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Display.HdrCapabilities;
 
+import org.lineageos.settings.charge.ChargeBoostUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -75,6 +76,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Start Thermal Management Services
         ThermalUtils.getInstance(context).startService();
+
+        // Restore the wired charge boost and keep it applied across charger plug-ins
+        ChargeBoostUtils.INSTANCE.startService(context);
     }
 
     private void overrideHdrTypes(Context context) {

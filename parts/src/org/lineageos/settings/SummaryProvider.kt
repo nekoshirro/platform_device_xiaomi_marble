@@ -10,6 +10,7 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
+import org.lineageos.settings.charge.ChargeBoostUtils
 import org.lineageos.settings.saturation.SaturationUtils
 import org.lineageos.settings.thermal.ThermalUtils
 
@@ -27,6 +28,13 @@ class SummaryProvider : ContentProvider() {
         val summary = when (method) {
             METHOD_THERMAL -> context.getString(
                 if (ThermalUtils.getInstance(context).enabled) R.string.tile_on else R.string.tile_off
+            )
+            METHOD_CHARGE_BOOST -> context.getString(
+                if (ChargeBoostUtils.isSupported() && ChargeBoostUtils.isEnabled(context)) {
+                    R.string.tile_on
+                } else {
+                    R.string.tile_off
+                }
             )
             METHOD_SATURATION -> "${SaturationUtils.get(context)}%"
             else -> return null
@@ -53,5 +61,6 @@ class SummaryProvider : ContentProvider() {
         private const val KEY_SUMMARY = "com.android.settings.summary"
         private const val METHOD_THERMAL = "thermalSummary"
         private const val METHOD_SATURATION = "saturationSummary"
+        private const val METHOD_CHARGE_BOOST = "chargeBoostSummary"
     }
 }
