@@ -210,6 +210,7 @@ ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES += $(DEVICE_PATH)/vintf/manifest_nfc.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(DEVICE_PATH)/duck-rkp/compatibility_matrix.xml \
     $(DEVICE_PATH)/vintf/dolby_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
