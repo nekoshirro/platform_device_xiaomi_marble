@@ -1,4 +1,6 @@
 # Display
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dbv u:object_r:vendor_sysfs_displayfeature:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dynamic_fps u:object_r:vendor_sysfs_displayfeature:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/panel_power_state u:object_r:vendor_sysfs_displayfeature:s0
 
 # Fingerprint
