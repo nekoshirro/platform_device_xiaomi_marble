@@ -1,0 +1,11 @@
+# Allow XiaomiParts to read and write sysfs_thermal
+allow system_app sysfs_thermal:dir r_dir_perms;
+allow system_app sysfs_thermal:{ file lnk_file } rw_file_perms;
+
+# Allow XiaomiParts to get settingsdebug.instant.packages prop
+get_prop(system_app, settingslib_prop)
+
+# Allow Performance Monitor to read CPU stats and frequencies
+allow system_app proc_stat:file r_file_perms;
+allow system_app sysfs_devices_system_cpu:dir search;
+allow system_app sysfs_devices_system_cpu:file r_file_perms;
