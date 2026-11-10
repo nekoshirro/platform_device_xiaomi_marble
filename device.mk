@@ -134,9 +134,6 @@ PRODUCT_COPY_FILES += \
 # Codec2
 PRODUCT_PACKAGES += \
     libqti_c2_store_abi_check
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    DSPVolumeSynchronizer
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
