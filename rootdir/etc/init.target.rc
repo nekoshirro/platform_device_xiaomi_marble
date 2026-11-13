@@ -136,8 +136,6 @@ on property:vendor.display.lcd_density=640
 on init && property:ro.boot.mode=charger
     wait_for_prop init.svc.vendor.modprobe stopped
     mount_all /vendor/etc/charger_fw_fstab.qti --early
-    wait /sys/kernel/boot_adsp/boot
-    write /sys/kernel/boot_adsp/boot 1
 
 on charger
     start vendor.power_off_alarm
