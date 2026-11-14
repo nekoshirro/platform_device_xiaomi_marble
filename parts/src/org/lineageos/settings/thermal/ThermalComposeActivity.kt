@@ -11,10 +11,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
 import org.lineageos.settings.thermal.ui.ThermalScreen
 import org.lineageos.settings.ui.ExpressiveTheme
@@ -42,23 +38,18 @@ class ThermalComposeActivity : ComponentActivity() {
         
         setContent {
             ExpressiveTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    val viewModel: ThermalViewModel = viewModel(
-                        factory = ThermalViewModelFactory(
-                            context = applicationContext,
-                            thermalUtils = thermalUtils,
-                            launcherApps = launcherApps
-                        )
+                val viewModel: ThermalViewModel = viewModel(
+                    factory = ThermalViewModelFactory(
+                        context = applicationContext,
+                        thermalUtils = thermalUtils,
+                        launcherApps = launcherApps
                     )
-                    
-                    ThermalScreen(
-                        viewModel = viewModel,
-                        onBackPressed = { finish() }
-                    )
-                }
+                )
+
+                ThermalScreen(
+                    viewModel = viewModel,
+                    onBackPressed = { finish() }
+                )
             }
         }
     }
