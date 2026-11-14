@@ -127,6 +127,7 @@ fun Modifier.expressiveInset(): Modifier = padding(horizontal = SettingsSpace.sm
 fun ExpressiveScaffold(
     title: String,
     onBack: () -> Unit,
+    actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit,
 ) {
     Scaffold(
@@ -142,6 +143,7 @@ fun ExpressiveScaffold(
                         )
                     }
                 },
+                actions = actions,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.settingsBackground,
                     scrolledContainerColor = MaterialTheme.colorScheme.settingsBackground,
@@ -214,7 +216,7 @@ private val LocalExpressiveRowShapes = compositionLocalOf<ListItemShapes?> { nul
 
 /** Segmented shapes of the enclosing group row, or a standalone (all outer corners) row. */
 @Composable
-private fun currentExpressiveRowShapes(): ListItemShapes =
+fun currentExpressiveRowShapes(): ListItemShapes =
     LocalExpressiveRowShapes.current ?: expressiveRowShapes(index = 0, count = 1)
 
 /**
