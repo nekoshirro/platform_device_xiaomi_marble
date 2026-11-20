@@ -98,8 +98,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
 
 PRODUCT_COPY_FILES += \
-    hardware/qcom-caf/sm8450-6.6/audio/primary-hal/configs/parrot/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee/audio_effects_config.xml \
-    hardware/qcom-caf/sm8450-6.6/audio/primary-hal/configs/parrot/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee/audio_module_config_primary.xml
+    $(LOCAL_PATH)/audio/audio_effects_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee/audio_effects_config.xml \
+    $(LOCAL_PATH)/audio/audio_module_config_primary.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_ukee/audio_module_config_primary.xml
 
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8450-6.6/audio/primary-hal/configs/common/codec2/media_codecs_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_audio.xml \
@@ -160,6 +160,9 @@ PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8450-6.6/display/core/snapalloc/resources/ubwc_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/ubwc_alignments.json \
     hardware/qcom-caf/sm8450-6.6/display/core/snapalloc/resources/video_alignments.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/video_alignments.json \
     hardware/qcom-caf/sm8450-6.6/display/core/snapalloc/resources/formats.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/formats.json
+
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
 
 # DRM
 PRODUCT_PACKAGES += \
