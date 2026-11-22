@@ -222,6 +222,7 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 ro.product.property_source_order=odm,vendor,product,system_ext,system
 
 # USB
+ro.usb.uvc.enabled=true
 ro.usb.uvc.disable_video_encode_flag=true
 sys.usb.mtp.batchcancel=1
 vendor.usb.controller=a600000.dwc3
