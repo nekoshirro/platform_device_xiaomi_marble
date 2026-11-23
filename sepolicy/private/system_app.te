@@ -7,5 +7,5 @@ get_prop(system_app, settingslib_prop)
 
 # Allow Performance Monitor to read CPU stats and frequencies
 allow system_app proc_stat:file r_file_perms;
-allow system_app sysfs_devices_system_cpu:dir search;
+allow system_app sysfs_devices_system_cpu:dir r_dir_perms;
 allow system_app sysfs_devices_system_cpu:file r_file_perms;
