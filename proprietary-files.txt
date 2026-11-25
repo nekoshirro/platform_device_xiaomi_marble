@@ -1852,9 +1852,7 @@ vendor/bin/subsystem_ramdump|3d794ee46bc2fb8f658ec59a8b9f1383938bec7d
 
 # Thermal - from diting OS3.0.7.0.VLFMIXM
 vendor/bin/mi_thermald|a50431989721b9c53af5fdeaa976fc0f9a33ad0c
-vendor/bin/thermal-engine-v2|567dff4d0c7b84bfef0475802d778824ed03f363
 vendor/etc/init/hw/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
-vendor/etc/init/init_thermal-engine-v2.rc|9771ade320d4a38f1e6ed849829cba74b9e5e4e1
 
 # Thermal engine
 vendor/etc/thermal-4k.conf
