@@ -19,6 +19,9 @@ persist.vendor.sys.fp.uid u:object_r:vendor_fp_info_prop:s0
 vendor.fps_hal. u:object_r:vendor_fp_prop:s0
 vendor.panel.display. u:object_r:vendor_fp_prop:s0
 
+# Keymint
+vendor.keymint.retry_timer u:object_r:vendor_keymint_retry_timer_prop:s0
+
 # Panel
 vendor.panel. u:object_r:vendor_panel_info_prop:s0
 
