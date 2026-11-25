@@ -177,7 +177,8 @@ DEVICE_MANIFEST_SKUS := ukee
 DEVICE_MANIFEST_UKEE_FILES := \
     $(DEVICE_PATH)/vintf/manifest_ukee.xml \
     $(DEVICE_PATH)/vintf/manifest_marble.xml \
-    $(DEVICE_PATH)/vintf/manifest_no_nfc.xml
+    $(DEVICE_PATH)/vintf/manifest_no_nfc.xml \
+    $(DEVICE_PATH)/vintf/manifest_keymint_rkp.xml
 
 ODM_MANIFEST_SKUS += marble
 ODM_MANIFEST_MARBLE_FILES += $(DEVICE_PATH)/vintf/manifest_nfc.xml
