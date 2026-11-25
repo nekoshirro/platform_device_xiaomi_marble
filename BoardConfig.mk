@@ -187,6 +187,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/vintf/framework_manifest.xml
 
 # Dolby
+TARGET_INCLUDES_DolbyVision ?= true
 include hardware/dolby/BoardConfigDolby.mk
 
 # Verified Boot
