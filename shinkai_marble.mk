@@ -7,12 +7,12 @@
 # Inherit from marble device
 $(call inherit-product, device/xiaomi/marble/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common Shinkai configuration
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := lineage_marble
+PRODUCT_NAME := shinkai_marble
 PRODUCT_DEVICE := marble
 PRODUCT_MANUFACTURER := Xiaomi
 
@@ -20,3 +20,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 BUILD_FINGERPRINT := Redmi/marble/marble:15/AQ3A.250226.002/OS3.0.5.0.VMRCNXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+SHINKAI_MAINTAINER := Hafidz_Muzakky
