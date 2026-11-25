@@ -850,6 +850,12 @@
                 <!-- DEVICEPP_TX - DEVICEPP_TX_RECORDING_ASR  -->
                 <graph_kv key="0xAD000000" value="0xAD000074"/>
             </keys_and_values>
+            <keys_and_values StreamType="PAL_STREAM_LOW_LATENCY,PAL_STREAM_ULTRA_LOW_LATENCY">
+                <!-- DEVICETX - HANDSETMIC -->
+                <graph_kv key="0xA3000000" value="0xA3000004"/>
+                <!-- DEVICEPP_TX - DEVICEPP_TX_AUDIO_FLUENCE_ENDFIRE -->
+                <graph_kv key="0xAD000000" value="0xAD000003"/>
+            </keys_and_values>
             <keys_and_values StreamType="PAL_STREAM_DEEP_BUFFER">
                 <!-- DEVICETX - HANDSETMIC -->
                 <graph_kv key="0xA3000000" value="0xA3000004"/>
@@ -1063,6 +1069,12 @@
                 <!-- DEVICEPP_TX - DEVICEPP_TX_VOIP_FLUENCE_SMECNS -->
                 <graph_kv key="0xAD000000" value="0xAD000007"/>
             </keys_and_values>
+            <keys_and_values StreamType="PAL_STREAM_LOW_LATENCY,PAL_STREAM_ULTRA_LOW_LATENCY">
+                <!-- DEVICETX - HEADPHONE_MIC -->
+                <graph_kv key="0xA3000000" value="0xA3000003"/>
+                <!-- DEVICEPP_TX - DEVICEPP_TX_AUDIO_FLUENCE_ENDFIRE -->
+                <graph_kv key="0xAD000000" value="0xAD000003"/>
+            </keys_and_values>
         </devicepp>
         <!-- IN USB device and USB headset DevicePPs -->
         <devicepp id="PAL_DEVICE_IN_USB_DEVICE,PAL_DEVICE_IN_USB_HEADSET">
@@ -1087,6 +1099,12 @@
                 <graph_kv key="0xA3000000" value="0xA3000005"/>
                 <!-- DEVICEPP_TX - DEVICEPP_TX_VOIP_FLUENCE_SMECNS -->
                 <graph_kv key="0xAD000000" value="0xAD000007"/>
+            </keys_and_values>
+            <keys_and_values StreamType="PAL_STREAM_LOW_LATENCY,PAL_STREAM_ULTRA_LOW_LATENCY">
+                <!-- DEVICETX - USB_TX -->
+                <graph_kv key="0xA3000000" value="0xA3000005"/>
+                <!-- DEVICEPP_TX - DEVICEPP_TX_AUDIO_FLUENCE_ENDFIRE -->
+                <graph_kv key="0xAD000000" value="0xAD000003"/>
             </keys_and_values>
         </devicepp>
         <!-- IN Handset_VA_MIC DevicePPs -->
