@@ -64,35 +64,45 @@ echo 0 > /proc/sys/walt/sched_boost
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
-# configure governor settings for silver cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-echo 556800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
-echo 1804800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
-echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
-
 # configure input boost settings
 echo 1132800 0 0 0 1113600 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
 echo 120 > /proc/sys/walt/input_boost/input_boost_ms
 
-# configure governor settings for gold cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
-echo 1555200 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
-echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
+avail_govs=" $(cat /sys/devices/system/cpu/cpufreq/policy0/scaling_available_governors 2>/dev/null) "
+if [ "${avail_govs#* vorpal }" != "$avail_govs" ]; then
+    # configure vorpal governor across all clusters
+    echo "vorpal" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    echo "vorpal" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+    echo "vorpal" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
+else
+    # configure governor settings for silver cluster
+    echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
+    echo 1228800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 
-# configure governor settings for gold+ cluster
-echo "walt" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
-echo 1651200 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
-echo 1 > /sys/devices/system/cpu/cpufreq/policy7/walt/pl
+    # configure governor settings for gold cluster
+    echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
+    echo 1555200 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 
-# colocation V3 settings
-echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
+    # configure governor settings for gold+ cluster
+    echo "walt" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/walt/up_rate_limit_us
+    echo 1651200 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/walt/pl
+
+    # colocation V3 settings
+    echo 768000 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
+fi
+
+# configure silver cluster frequency bounds
+echo 556800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+echo 1804800 > /sys/devices/system/cpu/cpufreq/policy0/scaling_max_freq
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
