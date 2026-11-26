@@ -76,6 +76,7 @@ ro.hardware.camera=xiaomi
 ro.soc.manufacturer=QTI
 
 # Display
+ro.vendor.display.dolbyvision.support=true
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=0
 vendor.display.disable_excl_rect=0
